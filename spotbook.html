@@ -169,6 +169,13 @@
   function viewFood(foodName) {
   alert('Viewing details for: ' + foodName);
 }
+    function viewFood(foodName) {
+    // Encode the food name to use in the URL (handles spaces and special characters)
+    const encodedFood = encodeURIComponent(foodName);
+
+    // Redirect to the food menu page with a query parameter
+    window.location.href = `foodmenu.html?food=${encodedFood}`;
+  }
 </script>
 </body>
 
